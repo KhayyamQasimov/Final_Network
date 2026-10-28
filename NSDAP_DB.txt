@@ -1,0 +1,51 @@
+
+CREATE DATABASE NSDAP;
+GO
+
+USE NSDAP;
+GO
+
+CREATE TABLE Leaders (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR(50) NOT NULL,
+    Age INT NOT NULL,
+    [Rank] NVARCHAR(100) NOT NULL
+);
+GO
+
+INSERT INTO Leaders (FirstName, LastName, Age, [Rank]) VALUES
+('Adolf', 'Hitler', 56, 'Führer und Reichskanzler'),
+('Heinrich', 'Himmler', 44, 'Reichsführer-SS'),
+('Joseph', 'Goebbels', 47, 'Reichsminister für Volksaufklärung und Propaganda'),
+('Hermann', 'Göring', 52, 'Reichsmarschall'),
+('Reinhard', 'Heydrich', 38, 'SS-Obergruppenführer und General der Polizei'),
+('Albert', 'Speer', 39, 'Reichsminister für Rüstung und Kriegsproduktion'),
+('Martin', 'Bormann', 44, 'Leiter der Partei-Kanzlei'),
+('Joachim', 'von Ribbentrop', 52, 'Reichsminister des Äußern'),
+('Karl', 'Donitz', 53, 'Grossadmiral und Reichspräsident'),
+('Wilhelm', 'Keitel', 62, 'Generalfeldmarschall'),
+('Erwin', 'Rommel', 52, 'Generalfeldmarschall'),
+('Erich', 'von Manstein', 57, 'Generalfeldmarschall'),
+('Rudolf', 'Hess', 47, 'Stellvertreter des Führers'),
+('Adolf', 'Eichmann', 39, 'SS-Obersturmbannführer'),
+('Rudolf', 'Höß', 44, 'SS-Sturmbannführer'),
+('Josef', 'Mengele', 33, 'SS-Hauptsturmführer'),
+('Walther', 'von Brauchitsch', 60, 'Generalfeldmarschall'),
+('Alfred', 'Rosenberg', 50, 'Reichsminister für die besetzten Ostgebiete'),
+('Hans', 'Frank', 44, 'General-Gouverneur für die besetzten polnischen Gebiete'),
+('Wilhelm', 'Frick', 63, 'Reichsminister des Innern'),
+('Arthur', 'Seyss-Inquart', 51, 'Reichskommissar für die besetzten niederländischen Gebiete'),
+('Julius', 'Streicher', 59, 'Gauleiter von Franken'),
+('Baldur', 'von Schirach', 37, 'Reichsjugendführer'),
+('Ernst', 'Röhm', 46, 'Stabschef der SA'),
+('Gregor', 'Strasser', 42, 'Reichsorganisationsleiter'),
+('Wilhelm', 'Canaris', 55, 'Admiral und Chef der Abwehr'),
+('Gerd', 'von Rundstedt', 67, 'Generalfeldmarschall'),
+('Heinz', 'Guderian', 56, 'Generaloberst'),
+('Fedor', 'von Bock', 62, 'Generalfeldmarschall'),
+('Erich', 'Raeder', 67, 'Großadmiral');
+GO
+
+SELECT * FROM Leaders;
+GO
